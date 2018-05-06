@@ -4,15 +4,15 @@
   </div>
   <div class="col-sm-9 p-a-xs">
     <p>Get <strong>free training</strong> from an expert through our classes on Kubernetes and Rancher</p>
-    <p><a href="{{ .Site.BaseURL }}/training">Sign Up Now</a></p>
+    <p><a href="{{ .Site.BaseURL }}/training">立即注册</a></p>
   </div>
 </div>
 
 <div class="bg-default p-h-md p-v-sm">
-  <h3 class="m-t-0 m-b-sm">Recent Posts</h3>
+  <h3 class="m-t-0 m-b-sm">最新文章</h3>
   {{ range first 5 (where .Site.Pages "Section" "blog") }}
       <div class="row aside-item">
-        <div class="bg-accent col-md row middle-md center-md"><i class="material-icons">question_answer</i></div>
+        <div class="bg-accent col-md row middle-md center-md"><i class="material-icons">问答</i></div>
         <div class="col-md aside-info">
           <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
           {{ .Date.Format "Jan 02, 2006" }}
@@ -23,12 +23,12 @@
 
 
 <div class="bg-default p-h-md p-v-sm m-t-sm">
-  <h3 class="m-t-0 m-b-sm">Upcoming Events</h3>
+  <h3 class="m-t-0 m-b-sm">近期活动</h3>
   <div id="events-list-injected"> </div>
 
   {{ range first 5 (where .Site.Pages "Section" "events") }}
       <div class="row aside-item">
-        <div class="bg-accent col-md row middle-md center-md"><i class="material-icons">event</i></div>
+        <div class="bg-accent col-md row middle-md center-md"><i class="material-icons">活动</i></div>
         <div class="col-md aside-info">
           <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
           {{ .Date.Format "Jan 02, 2006" }}

@@ -37,24 +37,24 @@
                 <p>{{ .Summary | safeHTML }}</p>
                 {{ if .Truncated }}
                 <div>
-                  <a href="{{ .RelPermalink }}">Read More…</a>
+                  <a href="{{ .RelPermalink }}">继续阅读…</a>
                 </div>
                 {{ end }}
               </div>
 
               <div class="bg-default">
                 <div class="row">
-                 
+
                   {{ with .Params.author }}
                     <div class="p-h-sm p-v-xs"><i class="material-icons">person_outline</i> By: {{ . }}</div>
                   {{end}}
-      
+
                   {{ with .Params.date }}
                     <div class="p-h-sm p-v-xs"><i class="material-icons">event</i> {{ .Format "January 2, 2006" }}</div>
-                  {{end}}  
-                  
+                  {{end}}
+
                   {{ if eq .Section "blog" }}
-                    <div class="p-h-sm p-v-xs"><i class="material-icons">timer</i> Read Time: {{.ReadingTime}} minutes</div>
+                    <div class="p-h-sm p-v-xs"><i class="material-icons">timer</i>阅读时间: {{.ReadingTime}} 分钟</div>
                   {{end}}
 
                   {{ with .Params.location }}

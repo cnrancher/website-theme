@@ -12,21 +12,21 @@
                         <ul class="sub dropdown-menu">
                             {{ range .Children }}
                             <li class="{{ if $currentPage.IsMenuCurrent " main " . }}active{{ end }}">
-                                <a href="{{ .URL }}">{{ .Name }} {{ .Pre }}</a> 
+                                <a href="{{ .URL }}">{{ .Name }} {{ .Pre }}</a>
                             {{ end }}
                         </ul>
                         {{else}}
                         <li class="">
                             <a href="{{.URL}}" class="btn"><span>{{ .Name }} {{ .Pre }}</span></a>
                         </li>
-                        {{end}} 
+                        {{end}}
                         {{end}}
                 </ul>
             </nav>
         </div>
         <div class="pull-right">
-            <a href="/quick-start" class="text-white p-r-sm"><i class="material-icons">cloud_upload</i> Deploy Rancher</a>
-            <a href="/support" class="text-white"><i class="material-icons">chat</i> Get Support</a>
+            <a href="/quick-start" class="text-white p-r-sm"><i class="material-icons">cloud_upload</i>部署 Rancher</a>
+            <a href="/support" class="text-white"><i class="material-icons">chat</i>获取支持</a>
         </div>
     </div>
 </header>
