@@ -31,8 +31,13 @@
   border-radius: 3px;
 }
 
+.circle {
+  border-radius: 50%;
+}
+
 .box {
-  border: $light-grey solid 3px;
+  border: $light-grey solid .5px;
+  box-shadow: 0 0 5px $light-grey;
 
   h2 {
     font-size: 2em;
