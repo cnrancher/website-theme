@@ -97,6 +97,7 @@
 //sml padding
 .p-a-sm {
   padding: $spacer-sm;
+  //text-align:center;
 }
 
 .p-t-sm {
@@ -197,7 +198,7 @@
 }
 
 .m-r-sm {
-  margin-right: $spacer-sm;
+  margin-right: 0.1rem;
 }
 
 .m-b-sm {
@@ -209,6 +210,7 @@
 }
 
 .m-h-sm {
+  text-align:center;
   margin-left: $spacer-sm;
   margin-right: $spacer-sm;
 }
