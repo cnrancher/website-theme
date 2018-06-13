@@ -520,7 +520,6 @@
     -ms-flex-preferred-size: 33.333%;
     flex-basis: 33.333%;
     max-width: 33.333%;
-    text-align: left;
   }
 
   .col-md-5 {
@@ -626,6 +625,7 @@
     -ms-flex-pack: center;
     -webkit-box-pack: center;
     justify-content: center;
+    text-align:center;
   }
 
   .end-md {
