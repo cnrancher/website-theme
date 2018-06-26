@@ -81,9 +81,20 @@
         {{ end }}
       </article>
 
-<!--       <aside class="col-md-9 hidden-md">
-        {{ partial "sidebar.html" . }}
-      </aside> -->
+      <div class="row center-xs p-v-lg">
+          <div class="box col-md-9">
+            <div class="row middle-xs">
+              <div class="col-md-4 p-a-md">
+                <img src="/img/spot/spot-training.svg">
+              </div>
+              <div class="col-md-8 p-a-md">
+                <p class="text-md">获取我们在Kubernetes和Rancher上的免费培训课程</p>
+                <a href="{{ .Site.BaseURL }}/training" class="btn bg-accent">立即注册</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
     </div>
   </div>
 {{ end }}
