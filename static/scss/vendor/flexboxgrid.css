@@ -474,6 +474,7 @@
   .col-md-4,
   .col-md-5,
   .col-md-6,
+  .col-md-6-r,
   .col-md-7,
   .col-md-8,
   .col-md-9,
@@ -534,6 +535,13 @@
     -ms-flex-preferred-size: 50%;
     flex-basis: 50%;
     max-width: 50%;
+  }
+
+  .col-md-6-r {
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    max-width: 50%;
+    text-align: right;
   }
 
   .col-md-7 {
