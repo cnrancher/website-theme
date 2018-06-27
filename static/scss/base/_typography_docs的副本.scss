@@ -14,62 +14,63 @@ body {
   letter-spacing: .03em;
 }
 
-//
-//.wrapper {
-//  //text-align:center;
-//  width: 87.5%;
-//  margin-left: auto;
-//  margin-right: auto;
-//  max-width: 1400px;
-//}
-//
+.wrapper {
+  //text-align:center;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1600px;
+}
+
 h1, h2 {
   font-family: $text-font-header;
   font-weight: 600;
 }
 
 h3, h4, h5, h6 {
-  font-family: $text-font-header;
-  color: $mid-grey;
-  margin-top: 0;
-  margin-bottom: 0;
+  font-family: $text-font-stack;
+  color: $dark-grey;
+  letter-spacing: .3px;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
 
 }
 
 h1 {
   // margin-bottom: 1.5rem;
-  font-size: 5rem;
+  font-size: 6rem;
   line-height: 1;
   text-transform: capitalize;
 
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 3em;
   line-height: 1.05em;
   margin-top: 4rem;
-  margin-bottom: .7rem;
+  margin-bottom: 1.5rem;
   text-transform: capitalize;
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   line-height: 1.14384615;
-  margin-top: 2rem;
-  margin-bottom: 0;
+  // margin-top: 2rem;
+  // margin-bottom: 0;
 }
 
 h4 {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   line-height: 2rem;
   color: $mid-grey;
 }
 
 h5, h6 {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   line-height: 2rem;
   color: $mid-grey;
-  text-transform: uppercase;
+  // margin-bottom: .7rem;
+  // margin-top: 1.4rem;
 }
 
 hr {
@@ -113,7 +114,7 @@ blockquote {
 
 cite {
   display: block;
-  font-family: $text-font-header;
+  font-family: 'Barlow', sans-serif;
   font-weight: 300;
   font-style: normal;
   padding-top: 10px;
@@ -179,9 +180,7 @@ h3>code {
 pre {
   background-color: $dark-grey;
   padding: $spacer-xs;
-  // white-space: pre-wrap;
-  white-space: pre;
-  overflow: scroll;
+  white-space: pre-wrap;
   word-wrap: break-word;
   border-radius: 3px;
   font-size: $base-font-size;
@@ -223,7 +222,7 @@ ul {
   }
 
   li {
-    margin-bottom: calc($spacer-xs / 2);
+    margin-bottom: 15px;
   }
 }
 
@@ -244,11 +243,6 @@ ul {
 .text-lg {
   font-size: 3rem;
   line-height: 4rem;
-}
-
-.text-huge {
-  font-size: 6rem;
-  margin: 0;
 }
 
 //alternative styles
