@@ -12,16 +12,10 @@
   h1 {
     text-shadow: 4px 4px 6px rgba(0, 0, 0, .25);
     margin: 0;
+    font-size: 5rem;
+    color: white;
   }
 }
-
-.homepage {
-  .hero {
-     background: url(../../img/header-placeholder.svg);
-     color: $link-color;
-    }
-}
-
 .wrapper {
   width: 87.5%;
   margin-left: auto;
@@ -139,15 +133,15 @@
   }
 }
 
-.desks {
-  background-image: url(../../img/desks.svg);
-  background-repeat: no-repeat;
-  background-position: right center;
-}
-
 //main content
 .main-content {
-  font-weight: 300;
+
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 0;
+  }
 
   p {
     margin-bottom: 1.75em;
@@ -188,10 +182,6 @@
     border: 0;
   }
 
-  h2 {
-    color: $primary;
-  }
-
   ul {
     list-style-type: none;
 
@@ -201,7 +191,7 @@
       &:before {
         font-family: 'Material Icons';
         content: "label";
-        color: $link-color;
+        color: $mid-grey;
         padding-right: 15px;
         position: absolute;
         left: -30px;
@@ -258,9 +248,22 @@
         display: inline-block;
         float: left;
         vertical-align: top;
-        margin: .7rem 0;
+        // margin: .7rem 0;
         padding-right: $spacer-xs;
         color: $mid-grey;
+      }
+
+      &:first-child {
+        padding-top: 0;
+
+        // &:before {
+        //   margin-bottom: 1.4rem;
+        // }
+      }
+
+      &:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
       }
 
       p {
