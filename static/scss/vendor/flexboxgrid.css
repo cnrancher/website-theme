@@ -260,6 +260,7 @@
   .col-sm-4,
   .col-sm-5,
   .col-sm-6,
+  .col-sm-6-r,  
   .col-sm-7,
   .col-sm-8,
   .col-sm-9,
@@ -318,6 +319,13 @@
     -ms-flex-preferred-size: 50%;
     flex-basis: 50%;
     max-width: 50%;
+  }
+
+  .col-sm-6-r {
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    max-width: 50%;
+    text-align: right;
   }
 
   .col-sm-7 {
