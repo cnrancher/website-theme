@@ -98,11 +98,11 @@
         });
         </script>
       {{end}}
-
+<!--
       <div class="row middle p-v-sm">
         <span>{{ partial "addthis" . }}</span>
       </div>
-
+    -->
         {{ if and (.Params.author) (eq .Section "blog") }}
         <div class="bio p-t-lg">
           {{ with index .Site.Data.authors .Params.author }}
