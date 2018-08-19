@@ -194,7 +194,6 @@
 }
 
 .center-xs {
-  text-align: inherit;
   -ms-flex-pack: center;
   -webkit-box-pack: center;
   justify-content: center;
@@ -260,7 +259,6 @@
   .col-sm-4,
   .col-sm-5,
   .col-sm-6,
-  .col-sm-6-r,  
   .col-sm-7,
   .col-sm-8,
   .col-sm-9,
@@ -319,13 +317,6 @@
     -ms-flex-preferred-size: 50%;
     flex-basis: 50%;
     max-width: 50%;
-  }
-
-  .col-sm-6-r {
-    -ms-flex-preferred-size: 50%;
-    flex-basis: 50%;
-    max-width: 50%;
-    text-align: right;
   }
 
   .col-sm-7 {
@@ -479,20 +470,14 @@
   .col-md-1,
   .col-md-2,
   .col-md-3,
-  .col-md-3-c,
   .col-md-4,
-  .col-md-4-r,
   .col-md-5,
   .col-md-6,
-  .col-md-6-r,
   .col-md-7,
   .col-md-8,
-  .col-md-8-c,
   .col-md-9,
-  .col-md-9-c,
   .col-md-10,
   .col-md-11,
-  .col-md-13,
   .col-md-12 {
     box-sizing: border-box;
     -ms-flex: 0 0 auto;
@@ -510,7 +495,6 @@
     -ms-flex-preferred-size: 0;
     flex-basis: 0;
     max-width: 100%;
-  
   }
 
   .col-md-1 {
@@ -531,25 +515,10 @@
     max-width: 25%;
   }
 
-  .col-md-3-c {
-    -ms-flex-preferred-size: 25%;
-    flex-basis: 25%;
-    max-width: 25%;
-    text-align: center;
-  }
-
   .col-md-4 {
     -ms-flex-preferred-size: 33.333%;
     flex-basis: 33.333%;
     max-width: 33.333%;
-
-  }
-
-  .col-md-4-r {
-    -ms-flex-preferred-size: 33.333%;
-    flex-basis: 33.333%;
-    max-width: 33.333%;
-    text-align: right;
   }
 
   .col-md-5 {
@@ -564,13 +533,6 @@
     max-width: 50%;
   }
 
-  .col-md-6-r {
-    -ms-flex-preferred-size: 50%;
-    flex-basis: 50%;
-    max-width: 50%;
-    text-align: right;
-  }
-
   .col-md-7 {
     -ms-flex-preferred-size: 58.333%;
     flex-basis: 58.333%;
@@ -583,25 +545,10 @@
     max-width: 66.6666667%;
   }
 
-
-  .col-md-8-c {
-    -ms-flex-preferred-size: 66.6666667%;
-    flex-basis: 66.6666667%;
-    max-width: 66.6666667%;
-    text-align: center;
-  }
-
   .col-md-9 {
     -ms-flex-preferred-size: 75%;
     flex-basis: 75%;
     max-width: 75%;
-  }
-
-  .col-md-9-c {
-    -ms-flex-preferred-size: 75%;
-    flex-basis: 75%;
-    max-width: 75%;
-    text-align: center;
   }
 
   .col-md-10 {
@@ -620,16 +567,6 @@
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
-  }
-
-  .col-md-13 {
-    -ms-flex-positive: 1;
-    -webkit-box-flex: 1;
-    flex-grow: 1;
-    -ms-flex-preferred-size: 0;
-    flex-basis: 0;
-    max-width: 100%;
-    text-align: center;
   }
 
   .col-md-offset-1 {
@@ -687,7 +624,6 @@
     -ms-flex-pack: center;
     -webkit-box-pack: center;
     justify-content: center;
-    text-align:center;
   }
 
   .end-md {

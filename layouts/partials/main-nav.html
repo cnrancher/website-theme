@@ -29,24 +29,21 @@
           <a href="https://www.rancher.com/" class="btn border-btn p-a-xs">English</a>
         </div>
       </div>
-      <ul class="cta-header row middle-xs end-xs unstyled">
+
+
+      <ul class="cta-header row middle-xs end-xs">
+        
       </ul>
     </nav>
   </div>
 
   <div class="container-search">
-    <form id="searchForm">
-      <div class="search-input-group clearfix">
-        <input type="search" class='search-input' id='search' autocomplete="off" placeholder="搜索关键字..."></input>
-        <i class="material-icons" id="search-cancel">cancel</i>
-        <!-- <i id="searchSpinner" class="fa fa-spinner fa-spin" aria-hidden="true"></i> -->
-      </div>
-    </form>
+    <form id="searchForm"><input type="search" class='' id='search-box' autocomplete="off"></input></form>
   </div>
 
 </header>
 
 <div class="overlay-search">
-  <table class="search-results" id="searchResults"></table>
+  <div class="search-results" id="hits"></div>
 </div>
 
