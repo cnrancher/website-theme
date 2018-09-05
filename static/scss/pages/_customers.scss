@@ -20,7 +20,9 @@
 
   //list
   .box-list-item {
-    width: 50%;
+    footer {
+      padding: $spacer-sm 0 0 0;
+    }
   }
 
   .slider {
@@ -76,6 +78,7 @@
 
     .feat-img {
       max-height: 75px;
+      max-width: 200px;
       width: auto;
     }
   }
