@@ -1,11 +1,12 @@
 .customers {
   .hero {
-    padding: 2rem 0;
+    background: transparent;
+    padding: $spacer-md 0;
 
     h1 {
       margin: $spacer-md 0;
       text-shadow: none;
-      color: white;
+      color: $text-color;
     }
   }
 
