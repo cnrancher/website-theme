@@ -16,6 +16,50 @@
             {{end}}
         {{end}}
 
+        <!--event details or author and date-->
+         {{ if eq .Section "events" }}
+          <div class="row middle-xs">
+            {{ with .Params.date }}
+              <span class="detail p-h-xs">
+              {{.Format "Monday January 2, 2006"}}
+
+                {{end}}
+              {{ with .Params.enddate }}
+                - {{ . | dateFormat "Monday, Jan 2, 2006" }}
+              {{end}}
+              </span>
+
+            <span class="detail p-h-xs">{{ .Params.time }}</span>
+
+            {{ with .Params.location }}
+              <span class="detail p-h-xs">{{ . }}</span>
+            {{end}}
+          </div>
+
+          <div class="m-t-sm">
+            {{ with .Params.link }}
+                <a href="{{ . }}" class="btn bg-accent" target="_blank">Register Here</a>
+            {{end}}
+          </div>
+
+          {{ else }}
+
+          <div class="row middle-xs">
+            {{ if and (.Params.author) (eq .Section "blog") }}
+              {{ with index .Site.Data.authors .Params.author }}
+                <div class="row middle-xs p-l-sm p-a-xs">
+                  <img src="{{.pic}}" class="circle" alt="{{.name}}" height="35" width="35" />
+                  <span class="detail p-l-xs">{{ .name }}</span>
+                </div>
+              {{end}}
+            {{end}}
+
+            {{ with .Params.date }}
+              <div class="detail"><span class="p-h-xs"></span>{{ .Format "January 2, 2006" }}</div>
+            {{end}}
+          </div>
+        {{end}}
+
         <!--title and description-->
         {{ with .Params.title }}
           <h1 class="m-t-0">{{ . }}</h1>
@@ -26,57 +70,16 @@
 
           {{ else }}
 
-          <p class="p-t-sm">{{ .Description }}</p>
+          <p class="text-muted">{{ .Description }}</p>
         {{end}}
 
 
+        <!--list tags-->
         {{ if eq .Section "events" }}
-            <div class="row middle-xs">
-                {{ with .Params.date }}
-                  <span class="detail p-h-xs">
-                    {{.Format "Monday January 2, 2006"}}
+          {{ else }}
 
-                {{end}}
-                {{ with .Params.enddate }}
-                  - {{ . | dateFormat "Monday, Jan 2, 2006" }}
-                {{end}}
-              </span>
-
-              <span class="detail p-h-xs">{{ .Params.time }}</span>
-
-              {{ with .Params.location }}
-                <span class="detail p-h-xs">{{ . }}</span>
-              {{end}}
-            </div>
-
-            <div class="m-t-sm">
-              {{ with .Params.link }}
-                  <a href="{{ . }}" class="btn bg-accent" target="_blank">Register Here</a>
-              {{end}}
-            </div>
-
-            {{ else }}
-
-            <!--list tags-->
-            {{ partial "tag-list.html" . }}
-
-            <div class="row middle-xs between-xs">
-              {{ if and (.Params.author) (eq .Section "blog") }}
-                {{ with index .Site.Data.authors .Params.author }}
-                  <div class="row middle-xs p-l-sm p-a-xs">
-                    <img src="{{.pic}}" class="circle" alt="{{.name}}" height="35" width="35" />
-                    <span class="detail p-l-xs">{{ .name }}</span>
-                  </div>
-                {{end}}
-              {{end}}
-
-              {{ with .Params.date }}
-                <div class="detail"><span class="p-h-xs"></span>{{ .Format "January 2, 2006" }}</div>
-              {{end}}
-            </div>
-
-
-        {{end}}
+          {{ partial "tag-list.html" . }}
+        {{ end }}
 
       </div>
     </div>
@@ -90,6 +93,17 @@
     <!-- <div class="row center-xs"> -->
       <article class="main-content row center-xs">
         <div class="col-md-8 col-xs-12">
+
+          <!--cta defined in front matter-->
+          {{ if and (.Params.cta) (eq .Section "blog") }}
+            {{ with index .Site.Data.cta .Params.cta }}
+              <div class="cta-box">
+                <h5>{{ .header }}</h5>
+                  <p>{{ .copy }}</p>
+                  <a class="btn bg-warning" href="{{ .link }}" target="blank">{{ .button }}</a>
+              </div>
+            {{end}}
+          {{end}}
 
           {{ .Content }}
 
@@ -145,18 +159,10 @@
           </div>
           {{ end }}
 
-        <!-- cta -->
-         <div class="box m-v-lg">
-          <div class="row middle-xs">
-            <div class="col-md-4 p-a-md">
-              <img src="/img/spot/spot-training.svg" alt="training">
-            </div>
-            <div class="col-md-8 p-a-md">
-              <p class="text-md">参加Rancher与Kubernetes免费培训课程</p>
-              <a href="{{ .Site.BaseURL }}/training" class="btn bg-accent">立即注册</a>
-            </div>
-          </div>
-        </div>
+        <!-- related content -->
+        <div class="p-v-md">{{ partial "related-content.html" . }}</div>
+
+
         </div>
       </article>
 
