@@ -38,7 +38,7 @@
 
           <div class="m-t-sm">
             {{ with .Params.link }}
-                <a href="{{ . }}" class="btn bg-accent" target="_blank">Register Here</a>
+                <a href="{{ . }}" class="btn bg-accent" target="_blank">立即注册</a>
             {{end}}
           </div>
 
@@ -125,11 +125,11 @@
           });
           </script>
         {{end}}
-<!--
+
         <div class="row middle p-v-sm">
           <span>{{ partial "addthis" . }}</span>
         </div>
--->
+
           {{ if and (.Params.author) (eq .Section "blog") }}
           <div class="bio p-t-lg">
             {{ with index .Site.Data.authors .Params.author }}
