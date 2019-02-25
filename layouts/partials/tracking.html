@@ -1,8 +1,6 @@
 {{ $cache :=  now.Unix }}
 {{ if not (in (.Site.BaseURL | string) "localhost") }}
-
-  <!-- LinkedIn Tracking Code 
-
+  <!-- LinkedIn Tracking Code -->
   <script type="text/javascript">
     _linkedin_data_partner_id = "287004";
     </script><script type="text/javascript">
@@ -12,15 +10,12 @@
     b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
     s.parentNode.insertBefore(b, s);})();
   </script>
-  
+
   <noscript>
     <img height="1" width="1" style="display:none;" alt="tracking" src="https://dc.ads.linkedin.com/collect/?pid=287004&fmt=gif" />
   </noscript>
-  
--->
 
-  <!-- Twitter universal website tag code
-
+  <!-- Twitter universal website tag code -->
   <script>
     !function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
     },s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='//static.ads-twitter.com/uwt.js',
@@ -29,11 +24,9 @@
     twq('init','nz747');
     twq('track','PageView');
   </script>
+  <!-- End Twitter universal website tag code -->
 
-  End Twitter universal website tag code -->
-
-  <!-- Start of HubSpot Embed Code
-
+  <!-- Start of HubSpot Embed Code -->
   <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/468859.js"></script>
   <!-- End of HubSpot Embed Code -->
 {{ end }}
