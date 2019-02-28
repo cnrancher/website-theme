@@ -27,7 +27,6 @@
   {{ $local := resources.Get "js/app.js" }}
   {{ $appJs := slice $base $local  | resources.Concat "js/app.js" }}
   <script charset="utf-8" type="text/javascript" src="{{ $appJs.Permalink}}?{{ $cache}}"></script>
-  <link rel="stylesheet" type="text/css" href="/js/videopopup.css" media="screen" />
 
   {{ partial "seo.html" . }}
 
