@@ -3,13 +3,13 @@
     <img src="{{ .Site.BaseURL }}/img/spot/spot-training.svg" alt="training" />
   </div>
   <div class="col-sm-9 p-a-xs">
-    <p>参加Rancher与Kubernetes免费培训课程</p>
-    <p><a href="{{ .Site.BaseURL }}/training">立即注册</a></p>
+    <p>Get <strong>free training</strong> from an expert through our classes on Kubernetes and Rancher</p>
+    <p><a href="{{ .Site.BaseURL }}/training">Sign Up Now</a></p>
   </div>
 </div>
 
 <div class="">
-  <h3 class="m-t-0 m-b-sm">最新文章</h3>
+  <h3 class="m-t-0 m-b-sm">Recent Posts</h3>
   {{ range first 5 (where .Site.Pages "Section" "blog") }}
       <div class="row aside-item">
 
@@ -17,7 +17,7 @@
         {{ if .Params.image }}
           <div class="thumbnail"><img src="{{ .Params.image }}" alt="{{ .Params.title }}"></div>
           {{ else }}
-          <div class="thumbmail bg-default p-a-xs"><i class="material-icons">问答</i></div>
+          <div class="thumbmail bg-default p-a-xs"><i class="material-icons">question_answer</i></div>
         {{end}}
 
         <div class="col-md aside-info">
@@ -30,7 +30,7 @@
 
 
 <div class="m-t-sm">
-  <h3 class="m-t-0 m-b-sm">近期活动</h3>
+  <h3 class="m-t-0 m-b-sm">Upcoming Events</h3>
   <div id="events-list-injected"> </div>
 
   {{ range first 5 (where .Site.Pages "Section" "events") }}
@@ -40,7 +40,7 @@
         {{ if .Params.image }}
           <div class="thumbnail"><img src="{{ .Params.image }}" alt="{{ .Params.title }}"></div>
           {{ else }}
-          <div class="thumbmail bg-default p-a-xs"><i class="material-icons">活动</i></div>
+          <div class="thumbmail bg-default p-a-xs"><i class="material-icons">event</i></div>
         {{end}}
 
         <div class="col-md aside-info">
