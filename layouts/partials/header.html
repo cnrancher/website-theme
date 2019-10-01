@@ -139,8 +139,8 @@
             
                         <div class="primary-menus">
                             <ul class="primary-menus-wrap">
-                                <li class="primary-menu-item menu-why_rancher">
-                                    <a class="primary-menu" href="/what-is-rancher/overview">WHY Rancher？</a>
+                                <li class='primary-menu-item menu-why_rancher {{ if eq .Params.section "overview" }}active{{ end }}'>
+                                    <a class="primary-menu" href="/what-is-rancher/overview">WHY Rancher?</a>
 
                                     <ul class="primary-menus-sub">
                                         <div class="grid-container">
@@ -189,7 +189,7 @@
                                         </div>
                                     </ul>
                                 </li>
-                                <li class="primary-menu-item menu-products">
+                                <li class='primary-menu-item menu-products {{ if eq .Params.section "products" }}active{{ end }}'>
                                     <a class="primary-menu" href="/products">产品</a>
                                     <ul class="primary-menus-sub">
                                         <div class="grid-container">
@@ -226,7 +226,7 @@
                                         </div>
                                     </ul>
                                 </li>
-                                <li class="primary-menu-item menu-customers">
+                                <li class='primary-menu-item menu-customers {{ if eq .Params.section "customers" }}active{{ end }}'>
                                     <a class="primary-menu" href="/customers">客户案例</a>
 
                                     <ul class="primary-menus-sub">
@@ -299,7 +299,7 @@
                                         </div>
                                     </ul>
                                 </li>
-                                <li class="primary-menu-item menu-community">
+                                <li class='primary-menu-item menu-community {{ if eq .Params.section "resources" }}active{{ end }}'>
                                     <a class="primary-menu" href="/learn">社区与生态</a>
 
                                     <ul class="primary-menus-sub">
@@ -557,7 +557,7 @@
                                         </div>
                                     </ul>
                                 </li>
-                                <li class="primary-menu-item menu-company">
+                                <li class='primary-menu-item menu-company {{ if eq .Params.section "company" }}active{{ end }}'>
                                     <a class="primary-menu" href="/about/">公司介绍</a>
 
                                     <ul class="primary-menus-sub">
