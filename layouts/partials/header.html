@@ -30,8 +30,8 @@
                         <a href="/"><img class="logo-image" src="/imgs/rancher-logo-horiz-color.png"></a>
                     </div>
 
-                    <div class="mobile-search"><a href="#" class="search-open" data-launch-id="open-search"><img class="icon" src="/imgs/icon-search-mobile.svg"></a></div>
-        
+                    <div class="mobile-search"><a href="#" class="search-open" data-launch-id="open-search"><img class="icon" src="/imgs/icon-search-mobile.svg" alt="Gray Search Icon"></a></div>
+
                     <div class="mobile-menu-opener">
                         <span></span>
                         <span></span>
@@ -127,7 +127,7 @@
                             <li><a href="/request-a-demo/">申请演示</a></li>
                             <li><a href="/pricing/">申请报价</a></li>
                             <li><a href="/support">获取支持</a></li>
-                    <!--        <li><a href="/contact/">联系我们</a></li> -->
+                            <li><a href="/contact/">联系我们</a></li>
                             <li class="search"><a href="#" class="search-open" data-launch-id="open-search"><img class="icon" src="/imgs/icon-search.svg"></a></li>
                         </ul>
                     </div>
@@ -136,7 +136,7 @@
                         <div class="logo">
                             <a href="/"><img class="logo-image" src="/imgs/rancher-logo-horiz-color.png"></a>
                         </div>
-            
+
                         <div class="primary-menus">
                             <ul class="primary-menus-wrap">
                                 <li class='primary-menu-item menu-why_rancher {{ if eq .Params.section "overview" }}active{{ end }}'>
@@ -193,6 +193,9 @@
                                     <a class="primary-menu" href="/products">产品</a>
                                     <ul class="primary-menus-sub">
                                         <div class="grid-container">
+                                            <div class="row">
+                                                <div class="col-12 right">
+                                               
                                             <div class="primary-menu-blocks">
                                                 <div class="menu-sub-block">
                                                     <ul>
@@ -238,7 +241,7 @@
 
                                                         <div class="article-item">
                                                             <div class="article-thumbmail">
-                                                                <img class="image" src="/imgs/header-customers-featured-thumbnail.png">
+                                                                <img class="image" src="/imgs/header-customers-featured-thumbnail.png" alt="A Male Scientist in a White Lab Coat Looking Into a Microscope">
                                                             </div>
 
                                                             <div class="article-texts">
@@ -300,7 +303,7 @@
                                     </ul>
                                 </li>
                                 <li class='primary-menu-item menu-community {{ if eq .Params.section "resources" }}active{{ end }}'>
-                                    <a class="primary-menu" href="/learn">社区与生态</a>
+                                    <a class="primary-menu" href="/resources/">资源</a>
 
                                     <ul class="primary-menus-sub">
                                         <div class="grid-container">
@@ -308,252 +311,62 @@
                                                 <div class="menu-sub-block">
                                                     <ul>
                                                         <li class="articles-container">
+                                                            <div class="label">社区活动</div>
+                                                            <a href="/community" class="menu-sub-block-item">社区概述</a>
+                                                            <a href="/online-meetups" class="menu-sub-block-item">企业级认证培训</a>
+                                                            <a href="/online-meetups" class="menu-sub-block-item">开源社区在线培训</a>
+                                                            <a href="/online-meetups" class="menu-sub-block-item">认证证书查询</a>
+                                                            <a href="/events" class="menu-sub-block-item">线下活动</a>
+                                                            <a href="/rodeos" class="menu-sub-block-item">论坛</a>
+                                                            <a href="/rodeos" class="menu-sub-block-item">中国社区MVP</a>
+
+                                                            <a href="/online-meetups" class="menu-sub-block-item">在线 Meetups</a>
+                                                            <a href="/rodeos" class="menu-sub-block-item">实践研讨会</a>
+                                                            <a href="/kubernetes-master-class" class="menu-sub-block-item">Kubernetes Master Classes</a>
+                                                            
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="menu-sub-block">
+                                                    <ul>
+                                                        <li class="articles-container">
+                                                            <div class="label">生态合作</div>
+                                                            <a href="" class="menu-sub-block-item">生态合作伙伴</a>
+                                                            <a href="/partners/" class="menu-sub-block-item">合作伙伴</a>
+                                                            <a href="/resources/#analyst-reports" class="menu-sub-block-item">分析师报告</a>
+                                                            <a href="/resources/#whitepapers" class="menu-sub-block-item">白皮书</a>
+                                                            <a href="/resources/#ebooks" class="menu-sub-block-item">电子书</a>
+                                                            <a href="/resources/#videos" class="menu-sub-block-item">Videos</a>
+                                                            <a href="/resources/#podcasts" class="menu-sub-block-item">播客</a>
+                                                            <a href="/resources/#customer-stories" class="menu-sub-block-item">消费者故事</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="menu-sub-block">
+                                                    <ul>
+                                                        <li class="articles-container">
                                                             <div class="label">技术资料</div>
+                                                            <a href="/blog" class="menu-sub-block-item">博客</a>
                                                             <a href="/quick-start/" class="menu-sub-block-item">入门指南</a>
                                                             <a href="/training/" class="menu-sub-block-item">入门培训</a>
                                                             <a href="/tutorials/" class="menu-sub-block-item">教程</a>
                                                             <a href="/docs" class="menu-sub-block-item">文档</a>
                                                             <a href="/ebooks-and-whitepapers/" class="menu-sub-block-item">电子书和白皮书</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="menu-sub-block">
-                                                    <ul>
-                                                        <li class="articles-container">
-                                                            <div class="label">内容库</div>
                                                             
-                                                            <a href="/videos-and-podcasts/" class="menu-sub-block-item">视频和播客</a>
-                                                            <a href="/blog" class="menu-sub-block-item">博客</a>
                                                         </li>
                                                     </ul>
                                                 </div>
-                                                <div class="menu-sub-block">
-                                                    <ul>
-                                                        <li class="articles-container">
-                                                            <div class="label">社区</div>
-                                                            <a href="/community" class="menu-sub-block-item">社区概述</a>
-                                                            <a href="/online-meetups" class="menu-sub-block-item">在线 Meetups</a>
-                                                            <a href="/rodeos" class="menu-sub-block-item">实践研讨会</a>
-                                                            <a href="/kubernetes-master-class" class="menu-sub-block-item">Kubernetes Master Classes</a>
-                                                            <a href="/events" class="menu-sub-block-item">活动</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
+                                                
+                                                
                                             </div>
                                             <div class="primary-menu-blocks primary-menu-blocks-join">
                                                 <div class="menu-sub-block">
-                                                    <ul>
-                                                        <li class="articles-container">
-                                                            <div class="label">加入社区</div>
-                                                            <div class="menu-sub-items">
-                                                                <a href="https://forums.cnrancher.com/" class="menu-sub-block-item">论坛</a>
-                                                                <span class="menu-sub-block-item">|</span>
-                                                                <a href="http://slack.rancher.io/" class="menu-sub-block-item">Slack</a>
-                                                                <span class="menu-sub-block-item">|</span>
-                                                                <a href="https://github.com/rancher" class="menu-sub-block-item">Github</a>
-                                                                <span class="menu-sub-block-item">|</span>
-                                                                <a href="https://github.com/rancher" class="menu-sub-block-item">Github</a>
-                                                            </div>
-                                                        </li>
-                                                    </ul>
+                                                    <div style="text-align:center;"   class="articles-container">加入社区</div>
+                                                    <div style="text-align:center;" >
+                                                        <img style="height:150px;" src="/img/ewm.jpg" alt="二维码" />
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <!-- <div class="row">
-                                                <div class="left">
-                                                    
-                                                    <li class="articles-container split-half">
-                                                        <div class="label">Technical Resources
-                                                            <ul class="sns-services set-right">
-                                                                <li><a href="https://twitter.com/Rancher_Labs" target="_blank"><img src="/imgs/icon-twitter.svg"></a></li>
-                                                                <li><a href="https://www.linkedin.com/groups/6977008/profile" target="_blank"><img src="/imgs/icon-linkedin.svg"></a></li>
-                                                                <li><a href="https://www.facebook.com/rancherlabs/" target="_blank"><img src="/imgs/icon-facebook.svg"></a></li>
-                                                                <li><a href="https://www.youtube.com/channel/UCh5Xtp82q8wjijP8npkVTBA" target="_blank"><img src="/imgs/icon-youtube.svg"></a></li>
-                                                            </ul>
-                                                        </div>
-
-                                                        <div class="articles-wrap">
-                                                            <div class="article-item">
-                                                                <div class="article-texts">
-                                                                    <a href="/community/">
-                                                                        <p class="title-label">社区</p>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="article-item">
-                                                                <div class="article-texts">
-                                                                    <a href="/online-meetups/">
-                                                                        <p class="title-label">在线会议</p>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="article-item">
-                                                                <div class="article-texts">
-                                                                    <a href="/training/">
-                                                                        <p class="title-label">培训</p>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="article-item">
-                                                                <div class="article-texts">
-                                                                    <a href="/rodeos/">
-                                                                        <p class="title-label">Rancher Rodeos</p>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="article-item">
-                                                                <div class="article-texts">
-                                                                    <a href="/tutorials/">
-                                                                        <p class="title-label">教程</p>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="article-item">
-                                                                <div class="article-texts">
-                                                                    <a href="/kubernetes-master-class/">
-                                                                        <p class="title-label">Kubernetes Master Classes</p>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="article-item">
-                                                                <div class="article-texts">
-                                                                    <a href="/events/">
-                                                                        <p class="title-label">活动</p>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="article-item">
-                                                                <div class="article-texts">
-                                                                    <a href="/writing-program/">
-                                                                        <p class="title-label">Rancher Writing Program</p>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="article-item type-list">
-                                                                <div class="article-texts">
-                                                                    <a href="https://forums.rancher.com/">
-                                                                        <p class="title-label">Forums</p>
-                                                                    </a>
-                                                                    <a href="http://slack.rancher.io/">
-                                                                        <p class="title-label">Slack</p>
-                                                                    </a>
-                                                                    <a href="https://github.com/rancher">
-                                                                        <p class="title-label">Github</p>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </div> -->
-
-                                                        <!-- <div class="article-item">
-                                                            <div class="article-thumbmail"></div>
-                                                            <div class="article-texts">
-                                                                <h1 class="title-label">
-                                                                    Forums
-                                                                </h1>
-                                                                <p class="description-label">
-                                                                    Lucidus malesuada vero sudo appellatio facilisi iaceo
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="article-item">
-                                                            <div class="article-thumbmail"></div>
-                                                            <div class="article-texts">
-                                                                <h1 class="title-label">
-                                                                    Docs
-                                                                </h1>
-                                                                <p class="description-label">
-                                                                    Lucidus malesuada vero sudo appellatio facilisi iaceo
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="article-item">
-                                                            <div class="article-thumbmail"></div>
-                                                            <div class="article-texts">
-                                                                <h1 class="title-label">
-                                                                    Slack
-                                                                </h1>
-                                                                <p class="description-label">
-                                                                    Saepius tortor consectetuer meus abigo pneum cursus
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="article-item">
-                                                            <div class="article-thumbmail"></div>
-                                                            <div class="article-texts">
-                                                                <h1 class="title-label">
-                                                                    Training
-                                                                </h1>
-                                                                <p class="description-label">
-                                                                    Saepius tortor consectetuer meus abigo pneum cursus
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="article-item">
-                                                            <div class="article-thumbmail"></div>
-                                                            <div class="article-texts">
-                                                                <h1 class="title-label">
-                                                                    Github
-                                                                </h1>
-                                                                <p class="description-label">
-                                                                    Saepius tortor consectetuer meus abigo pneum cursus
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="article-item">
-                                                            <div class="article-thumbmail"></div>
-                                                            <div class="article-texts">
-                                                                <h1 class="title-label">
-                                                                    Event & Meetups
-                                                                </h1>
-                                                                <p class="description-label">
-                                                                    Saepius tortor consectetuer meus abigo pneum cursus
-                                                                </p>
-                                                            </div>
-                                                        </div> -->
-                                                    <!-- </li>
-                                                </div>
-                                                <div class="right">
-                                                    <li class="menus-container">
-                                                        <div class="label">Content Library</div>
-
-                                                        <a href="/quick-start/">
-                                                            <span>入门指南</span>
-                                                            <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
-                                                                <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
-                                                                    <path d="m19.5 12 5 5-5 5"/>
-                                                                    <path d="m24.5 17h-15"/>
-                                                                </g>
-                                                            </svg>
-                                                        </a>
-                                                        <a href="/blog/">
-                                                            <span>博客</span>
-                                                            <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
-                                                                <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
-                                                                    <path d="m19.5 12 5 5-5 5"/>
-                                                                    <path d="m24.5 17h-15"/>
-                                                                </g>
-                                                            </svg>
-                                                        </a>
-                                                        <a href="/ebooks-and-whitepapers/">
-                                                            <span>电子书和白皮书</span>
-                                                            <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
-                                                                <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
-                                                                    <path d="m19.5 12 5 5-5 5"/>
-                                                                    <path d="m24.5 17h-15"/>
-                                                                </g>
-                                                            </svg>
-                                                        </a>
-                                                        <a href="/videos-and-podcasts/">
-                                                            <span>视频和播客</span>
-                                                            <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
-                                                                <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
-                                                                    <path d="m19.5 12 5 5-5 5"/>
-                                                                    <path d="m24.5 17h-15"/>
-                                                                </g>
-                                                            </svg>
-                                                        </a>
-                                                    </li>
-                                                </div>
-                                            </div> -->
                                         </div>
                                     </ul>
                                 </li>
@@ -574,8 +387,8 @@
                                                                 </g>
                                                             </svg>
                                                         </a>
-                                                        <a href="/partners/">
-                                                            <span>合作伙伴</span>
+                                                        <a href="">
+                                                            <span>荣誉资质</span>
                                                             <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
                                                                 <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
                                                                     <path d="m19.5 12 5 5-5 5"/>
@@ -599,6 +412,15 @@
                                                                 <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
                                                                     <path d="m19.5 12 5 5-5 5"/>
                                                                     <path d="m24.5 17h-15"/>
+                                                                </g>
+                                                            </svg>
+                                                        </a>
+                                                        <a href="/contact/">
+                                                            <span>联系我们</span>
+                                                            <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
+                                                                <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
+                                                                    <path d="m19.5 12 5 5-5 5" />
+                                                                    <path d="m24.5 17h-15" />
                                                                 </g>
                                                             </svg>
                                                         </a>
