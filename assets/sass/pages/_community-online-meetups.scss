@@ -27,7 +27,7 @@
                 font-size: 50px;
                 font-weight: 200;
             }
-            
+
             .description-label {
                 color: #000;
                 line-height: 1.4;
@@ -50,7 +50,7 @@
             &.ground {
                 .ground-lower {
                     position: relative;
-                    
+
                     width: auto;
                     height: 75px;
 
@@ -84,7 +84,7 @@
 
                 .title-label {
                     margin-bottom: 10px;
-                
+
                     font-size: 2em;
                 }
             }
@@ -298,9 +298,7 @@
     }
     .card-item {
         padding: 45px 35px;
-
         background-color: $c-gray;
-
         border-radius: 1em;
 
         .text-label {
