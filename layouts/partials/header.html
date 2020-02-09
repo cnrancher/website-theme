@@ -4,445 +4,619 @@
 
 {{- $.Scratch.Set "topLevel" . -}}
 {{ range $page := $.Site.Sections }}
-  {{- if $.CurrentSection -}}
-    {{- if $page.IsAncestor $.CurrentSection -}}
-      {{- $.Scratch.Set "topLevel" . -}}
-    {{- end -}}
-  {{- end -}}
+{{- if $.CurrentSection -}}
+{{- if $page.IsAncestor $.CurrentSection -}}
+{{- $.Scratch.Set "topLevel" . -}}
+{{- end -}}
+{{- end -}}
 {{- end -}}
 
 <body lang="en" class="{{ replaceRE "/.*" "" ($.Scratch.Get "topLevel").Dir }}">
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-57KS2MW"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-57KS2MW" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-  <a name="top"></a>
+    <a name="top"></a>
 
 
-<div class="main"> <!--container ends in footer html-->
-    <header>
-        <nav>
-            <div class="mobile-header-container">
-                <div class="mobile-nav-header">
-                    <div class="logo">
-                        <a href="/"><img class="logo-image" src="/imgs/rancher-logo-horiz-color.png" alt="The Logo of Rancher: an Open Source Kubernetes Multi Cluster Management Platform"></a>
-                    </div>
-
-                    <div class="mobile-search"><a href="#" class="search-open" data-launch-id="open-search"><img class="icon" src="/imgs/icon-search-mobile.svg" alt="Gray Search Icon"></a></div>
-
-                    <div class="mobile-menu-opener">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
-
-                <div class="nav-mobile-menus jquery-accordion-menu">
-                    <ul class="mobile-menus-wrap">
-                        <li class="mobile-menu-item">
-                            <a class="mobile-menu" href="#">认识 Rancher</a>
-
-                            <ul class="submenu submenus-wrap">
-                                <li class=""><a href="/what-is-rancher/overview/">认识 Rancher</a></li>
-                                <li class=""><a href="/kubernetes/">为何选择Kubernetes？</a></li>
-                                <li class=""><a href="/what-is-rancher/what-rancher-adds-to-kubernetes/">Kubernetes 功能增强</a></li>
-                                <li class=""><a href="/what-is-rancher/how-is-rancher-different/">Rancher 不同之处</a></li>
-                            </ul>
-                        </li>
-                        <li class="mobile-menu-item">
-                            <a class="mobile-menu" href="#">产品</a>
-
-                            <ul class="submenu submenus-wrap">
-                                <li><a href="/products/">概述</a></li>
-                                <li><a href="/products/rancher/">Rancher</a></li>
-                                <li><a href="/rancher-os/">RancherOS</a></li>
-                                <li><a href="http://k3s.io" target="_blank">k3s</a></li>
-                                <li><a href="http://k3os.io" target="_blank">k3OS</a></li>
-                                <li><a href="http://submariner.io" target="_blank">Submariner</a></li>
-                                <li><a href="https://rio.io" target="_blank">Rio</a></li>
-                                <li><a href="/request-a-demo/">申请演示</a></li>
-                            </ul>
-                        </li>
-                        <li class="mobile-menu-item">
-                            <a class="mobile-menu" href="#">客户案例</a>
-
-                            <ul class="submenu submenus-wrap">
-                                <li><a href="/customers/illumina/">Illumina</a></li>
-                                <li><a href="/customers/sling/">Sling TV</a></li>
-                                <li><a href="/customers/eoc/">EOC</a></li>
-                                <li><a href="/customers/deutsche-bahn/">Deutsche Bahn</a></li>
-                                <li><a href="/customers/">查看所有客户案例</a></li>
-                            </ul>
-                        </li>
-                        <li class="mobile-menu-item">
-                            <a class="mobile-menu" href="#">社区</a>
-
-                            <ul class="submenu submenus-wrap">
-                                <li><a href="/community">概述</a></li>
-                                <li><a href="/training/">培训</a></li>
-                                <li><a href="/tutorials/">教程</a></li>
-                                <li><a href="/events/">活动</a></li>
-                                <li><a href="/online-meetups/">在线 Meetups</a></li>
-                                <li><a href="/rodeos/">Rancher Rodeos</a></li>
-                                <li><a href="/kubernetes-master-class/">Kubernetes Master Classes</a></li>
-                                <!-- <li><a href="/writing-program/">Rancher 写作计划</a></li> -->
-                                <li><a href="/quick-start/">入门指南</a></li>
-                                <li><a href="/blog/">博客</a></li>
-                                <li><a href="/ebooks-and-whitepapers/">电子书和白皮书</a></li>
-                                <li><a href="/videos-and-podcasts/">视频和播客</a></li>
-                                <li><a href="https://forums.rancher.com/">论坛</a></li>
-                                <li><a href="http://slack.rancher.io/">Slack</a></li>
-                                <li><a href="https://github.com/rancher">Github</a></li>
-                            </ul>
-                        </li>
-                        <li class="mobile-menu-item">
-                            <a class="mobile-menu" href="#">公司简介</a>
-
-                            <ul class="submenu submenus-wrap">
-                                <li><a href="/about/">关于我们</a></li>
-                                <li><a href="/partners/">合作伙伴</a></li>
-                                <li><a href="/press/">新闻</a></li>
-                                <li><a href="/events/">活动</a></li>
-                                <li><a href="/careers/">招聘</a></li>
-                                <li><a href="/blog/">博客</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="mobile-menu-item option-menu"><a href="/docs/">文档</a></li>
-                        <li class="mobile-menu-item option-menu"><a href="/support">获取支持</a></li>
-                        <li class="mobile-menu-item option-menu"><a href="/request-a-demo/">申请演示</a></li>
-                        <li class="mobile-menu-item option-menu"><a href="/contact/">联系我们</a></li>
-                        <li class="mobile-menu-item option-menu"><a href="/pricing/">申请报价</a></li>
-                        <li class="mobile-menu-item option-menu get-started"><a href="/quick-start/">开始使用</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="header-container">
-                <div class="header-wrap">
-                    <div class="header-option-menus">
-                        <ul>
-                            <li><a href="/docs/">文档</a></li>
-                            <li><a href="/request-a-demo/">申请演示</a></li>
-                            <li><a href="/pricing/">申请报价</a></li>
-                            <li><a href="/support">获取支持</a></li>
-                            <li><a href="/contact/">联系我们</a></li>
-                            <li class="search"><a href="#" class="search-open" data-launch-id="open-search"><img class="icon" src="/imgs/icon-search.svg"></a></li>
-                        </ul>
-                    </div>
-
-                    <div class="header-primary-menus">
+    <div class="main">
+        <!--container ends in footer html-->
+        <header>
+            <nav>
+                <div class="mobile-header-container">
+                    <div class="mobile-nav-header">
                         <div class="logo">
-                            <a href="/"><img class="logo-image" src="/imgs/rancher-logo-horiz-color.png" alt="Rancher Logo"></a>
+                            <a href="/"><img class="logo-image" src="/imgs/rancher-logo-horiz-color.png"
+                                    alt="Rancher: 一个开源的Kubernetes多集群管理平台"></a>
                         </div>
 
-                        <div class="primary-menus">
-                            <ul class="primary-menus-wrap">
-                                <li class='primary-menu-item menu-why_rancher {{ if eq .Params.section "overview" }}active{{ end }}'>
-                                    <a class="primary-menu" href="/what-is-rancher/overview">WHY Rancher?</a>
+                        <div class="mobile-search"><a href="#" class="search-open" data-launch-id="open-search"><img
+                                    class="icon" src="/imgs/icon-search-mobile.svg" alt="Gray Search Icon"></a></div>
 
-                                    <ul class="primary-menus-sub">
-                                        <div class="grid-container">
-                                            <div class="row">
-                                                <div class="col">
-                                                    <li class="menus-container">
-                                                        <a href="/what-is-rancher/overview/">
-                                                            <span>Rancher的价值</span>
-                                                            <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
-                                                                <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
-                                                                    <path d="m19.5 12 5 5-5 5"></path>
-                                                                    <path d="m24.5 17h-15"></path>
-                                                                </g>
-                                                            </svg>
-                                                        </a>
-                                                        <a href="/kubernetes/">
-                                                            <span>Kubernetes的价值</span>
-                                                            <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
-                                                                <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
-                                                                    <path d="m19.5 12 5 5-5 5"></path>
-                                                                    <path d="m24.5 17h-15"></path>
-                                                                </g>
-                                                            </svg>
-                                                        </a>
-                                                        <a href="/what-is-rancher/what-rancher-adds-to-kubernetes/">
-                                                            <span>Rancher如何进一步赋能Kubernetes</span>
-                                                            <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
-                                                                <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
-                                                                    <path d="m19.5 12 5 5-5 5"></path>
-                                                                    <path d="m24.5 17h-15"></path>
-                                                                </g>
-                                                            </svg>
-                                                        </a>
-                                                        <a href="/what-is-rancher/how-is-rancher-different/">
-                                                            <span>Rancher与其他产品对比</span>
-                                                            <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
-                                                                <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
-                                                                    <path d="m19.5 12 5 5-5 5"></path>
-                                                                    <path d="m24.5 17h-15"></path>
-                                                                </g>
-                                                            </svg>
-                                                        </a>
-                                                    </li>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </ul>
-                                </li>
-                                <li class='primary-menu-item menu-products {{ if eq .Params.section "products" }}active{{ end }}'>
-                                    <a class="primary-menu" href="/products">产品</a>
-                                    <ul class="primary-menus-sub">
-                                        <div class="grid-container">
-                                            <div class="row">
-                                                <div class="col-12 right">
-                                               
-                                            <div class="primary-menu-blocks">
-                                                <div class="menu-sub-block">
-                                                    <ul>
-                                                        <li class="articles-container">
-                                                            <div class="label">产品概览</div>
-                                                            
-                                                            <a href="/products/rancher" class="menu-sub-block-item">Rancher 
-                                                                <br>企业级Kubernetes管理平台</a>
-                                                            <a href="/rancher-os" class="menu-sub-block-item">Rancher OS
-                                                                <br>轻量级容器操作系统</a>
-                                                            <a href="/k3s" target="_blank" class="menu-sub-block-item">k3s
-                                                                <br>最轻量Kubernetes发行版</a>
-                                                            <a href="/k3os" target="_blank" class="menu-sub-block-item">k3OS
-                                                                <br>业界首个Kubernetes操作系统</a>
-                                                            <a href="/submariner" target="_blank" class="menu-sub-block-item">Submariner
-                                                                <br>多K8S集群之间的跨集群网络连接</a>
-                                                            <a href="/rio" target="_blank" class="menu-sub-block-item">Rio
-                                                                <br>极简MicroPaaS平台</a>
+                        <div class="mobile-menu-opener">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+
+                    <div class="nav-mobile-menus jquery-accordion-menu">
+                        <ul class="mobile-menus-wrap">
+                            <li class="mobile-menu-item">
+                                <a class="mobile-menu" href="#">认识 Rancher</a>
+
+                                <ul class="submenu submenus-wrap">
+                                    <li class=""><a href="/what-is-rancher/overview/">认识 Rancher</a></li>
+                                    <li class=""><a href="/kubernetes/">为何选择Kubernetes？</a></li>
+                                    <li class=""><a href="/what-is-rancher/what-rancher-adds-to-kubernetes/">Kubernetes
+                                            功能增强</a></li>
+                                    <li class=""><a href="/what-is-rancher/how-is-rancher-different/">Rancher 不同之处</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="mobile-menu-item">
+                                <a class="mobile-menu" href="#">产品</a>
+
+                                <ul class="submenu submenus-wrap">
+                                    <li><a href="/products/">概述</a></li>
+                                    <li><a href="/products/rancher/">Rancher</a></li>
+                                    <li><a href="/rancher-os/">RancherOS</a></li>
+                                    <li><a href="http://k3s.io" target="_blank">k3s</a></li>
+                                    <li><a href="http://k3os.io" target="_blank">k3OS</a></li>
+                                    <li><a href="http://submariner.io" target="_blank">Submariner</a></li>
+                                    <li><a href="https://rio.io" target="_blank">Rio</a></li>
+                                    <li><a href="/request-a-demo/">申请演示</a></li>
+                                </ul>
+                            </li>
+                            <li class="mobile-menu-item">
+                                <a class="mobile-menu" href="#">客户案例</a>
+
+                                <ul class="submenu submenus-wrap">
+                                    <li><a href="/customers/illumina/">Illumina</a></li>
+                                    <li><a href="/customers/sling/">Sling TV</a></li>
+                                    <li><a href="/customers/eoc/">EOC</a></li>
+                                    <li><a href="/customers/deutsche-bahn/">Deutsche Bahn</a></li>
+                                    <li><a href="/customers/">查看所有客户案例</a></li>
+                                </ul>
+                            </li>
+                            <li class="mobile-menu-item">
+                                <a class="mobile-menu" href="#">社区</a>
+
+                                <ul class="submenu submenus-wrap">
+                                    <li><a href="/community">概述</a></li>
+                                    <li><a href="/training/">培训</a></li>
+                                    <li><a href="/tutorials/">教程</a></li>
+                                    <li><a href="/events/">活动</a></li>
+                                    <li><a href="/online-meetups/">在线 Meetups</a></li>
+                                    <li><a href="/rodeos/">Rancher Rodeos</a></li>
+                                    <li><a href="/kubernetes-master-class/">Kubernetes Master Classes</a></li>
+                                    <!-- <li><a href="/writing-program/">Rancher 写作计划</a></li> -->
+                                    <li><a href="/quick-start/">入门指南</a></li>
+                                    <li><a href="/blog/">博客</a></li>
+                                    <li><a href="/ebooks-and-whitepapers/">电子书和白皮书</a></li>
+                                    <li><a href="/videos-and-podcasts/">视频和播客</a></li>
+                                    <li><a href="https://forums.rancher.com/">论坛</a></li>
+                                    <li><a href="http://slack.rancher.io/">Slack</a></li>
+                                    <li><a href="https://github.com/rancher">Github</a></li>
+                                </ul>
+                            </li>
+                            <li class="mobile-menu-item">
+                                <a class="mobile-menu" href="#">资源</a>
+
+                                <ul class="submenu submenus-wrap">
+                                    <li><a href="/docs">Docs</a></li>
+                                    <li><a href="/resources/#analyst-reports">Analyst Reports</a></li>
+                                    <li><a href="/resources/#whitepapers">White Papers</a></li>
+                                    <li><a href="/resources/#ebooks">Ebooks</a></li>
+                                    <li><a href="/resources/#videos">Videos</a></li>
+                                    <li><a href="/resources/#podcasts">Podcasts</a></li>
+                                    <li><a href="/blog/">Blog</a></li>
+                                </ul>
+                            </li>
+                            <li class="mobile-menu-item">
+                                <a class="mobile-menu" href="#">Projects</a>
+
+                                <ul class="submenu submenus-wrap">
+                                    <li><a href="/rancher-os/">RancherOS</a></li>
+                                    <li><a href="http://k3os.io/" target="_blank">k3OS</a></li>
+                                    <li><a href="http://submariner.io/" target="_blank">Submariner</a></li>
+                                    <li><a href="https://longhorn.io/" target="_blank">Longhorn</a></li>
+                                </ul>
+                            </li>
+                            <li class="mobile-menu-item">
+                                <a class="mobile-menu" href="#">公司介绍</a>
+
+                                <ul class="submenu submenus-wrap">
+                                    <li><a href="/about/">关于我们</a></li>
+                                    <li><a href="/partners/">合作伙伴</a></li>
+                                    <li><a href="/press/">新闻</a></li>
+                                    <li><a href="/events/">活动</a></li>
+                                    <li><a href="/careers/">招聘</a></li>
+                                    <li><a href="/blog/">博客</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="mobile-menu-item option-menu"><a href="/docs/">文档</a></li>
+                            <li class="mobile-menu-item option-menu"><a href="/support">获取支持</a></li>
+                            <li class="mobile-menu-item option-menu"><a href="/request-a-demo/">申请演示</a></li>
+                            <li class="mobile-menu-item option-menu"><a href="/contact/">联系我们</a></li>
+                            <li class="mobile-menu-item option-menu"><a href="/pricing/">申请报价</a></li>
+                            <li class="mobile-menu-item option-menu get-started"><a href="/quick-start/">开始使用</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="header-container">
+                    <div class="header-wrap">
+                        <div class="header-option-menus">
+                            <ul>
+                                <li><a href="/docs/">文档</a></li>
+                                <li><a href="/request-a-demo/">申请演示</a></li>
+                                <li><a href="/pricing/">申请报价</a></li>
+                                <li><a href="/support">获取支持</a></li>
+                                <li><a href="/contact/">联系我们</a></li>
+                                <li class="search"><a href="#" class="search-open" data-launch-id="open-search"><img
+                                            class="icon" src="/imgs/icon-search.svg"></a></li>
+                            </ul>
+                        </div>
+
+                        <div class="header-primary-menus">
+                            <div class="logo">
+                                <a href="/"><img class="logo-image" src="/imgs/rancher-logo-horiz-color.png"
+                                        alt="Rancher Logo"></a>
+                            </div>
+
+                            <div class="primary-menus">
+                                <ul class="primary-menus-wrap">
+                                    <li
+                                        class='primary-menu-item menu-why_rancher {{ if eq .Params.section "overview" }}active{{ end }}'>
+                                        <a class="primary-menu" href="/what-is-rancher/overview">WHY Rancher?</a>
+
+                                        <ul class="primary-menus-sub">
+                                            <div class="grid-container">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <li class="menus-container">
+                                                            <a href="/what-is-rancher/overview/">
+                                                                <span>Rancher的价值</span>
+                                                                <svg class="icon right"
+                                                                    enable-background="new 0 0 34 34"
+                                                                    viewBox="0 0 34 34"
+                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                    <g class="svg-linear" stroke-linecap="round"
+                                                                        stroke-linejoin="round" stroke-miterlimit="10">
+                                                                        <path d="m19.5 12 5 5-5 5"></path>
+                                                                        <path d="m24.5 17h-15"></path>
+                                                                    </g>
+                                                                </svg>
+                                                            </a>
+                                                            <a href="/kubernetes/">
+                                                                <span>Kubernetes的价值</span>
+                                                                <svg class="icon right"
+                                                                    enable-background="new 0 0 34 34"
+                                                                    viewBox="0 0 34 34"
+                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                    <g class="svg-linear" stroke-linecap="round"
+                                                                        stroke-linejoin="round" stroke-miterlimit="10">
+                                                                        <path d="m19.5 12 5 5-5 5"></path>
+                                                                        <path d="m24.5 17h-15"></path>
+                                                                    </g>
+                                                                </svg>
+                                                            </a>
+                                                            <a href="/what-is-rancher/what-rancher-adds-to-kubernetes/">
+                                                                <span>Rancher如何进一步赋能Kubernetes</span>
+                                                                <svg class="icon right"
+                                                                    enable-background="new 0 0 34 34"
+                                                                    viewBox="0 0 34 34"
+                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                    <g class="svg-linear" stroke-linecap="round"
+                                                                        stroke-linejoin="round" stroke-miterlimit="10">
+                                                                        <path d="m19.5 12 5 5-5 5"></path>
+                                                                        <path d="m24.5 17h-15"></path>
+                                                                    </g>
+                                                                </svg>
+                                                            </a>
+                                                            <a href="/what-is-rancher/how-is-rancher-different/">
+                                                                <span>Rancher与其他产品对比</span>
+                                                                <svg class="icon right"
+                                                                    enable-background="new 0 0 34 34"
+                                                                    viewBox="0 0 34 34"
+                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                    <g class="svg-linear" stroke-linecap="round"
+                                                                        stroke-linejoin="round" stroke-miterlimit="10">
+                                                                        <path d="m19.5 12 5 5-5 5"></path>
+                                                                        <path d="m24.5 17h-15"></path>
+                                                                    </g>
+                                                                </svg>
+                                                            </a>
                                                         </li>
-
-                                                    </ul>
-                                                </div>
-                                                
-                                            </div>
-                                            <div class="primary-menu-blocks primary-menu-blocks-join">
-                                                <div class="menus-container menu-container-button">
-                                                    <a class="box" href="/request-a-demo/">
-                                                        <span>申请演示</span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </ul>
-                                </li>
-                                <li class='primary-menu-item menu-customers {{ if eq .Params.section "customers" }}active{{ end }}'>
-                                    <a class="primary-menu" href="/customers">客户案例</a>
-
-                                    <ul class="primary-menus-sub">
-                                        <div class="grid-container">
-                                            <div class="row">
-                                                <div class="col left">
-                                                    <li class="feature-container single split-half">
-                                                        <div class="label">特色</div>
-
-                                                        <div class="article-item">
-                                                            <div class="article-thumbmail">
-                                                                <img class="image" src="/img/header-customers-featured-thumbnail.png" alt="A Male Scientist in a White Lab Coat Looking Into a Microscope">
-                                                            </div>
-
-                                                            <div class="article-texts">
-                                                                <a href="/customers/illumina/">
-                                                                    <h2 class="title-label">Illumina</h2>
-                                                                    <p class="description-label">
-                                                                        Illumina Innovates with Rancher and Kubernetes
-
-                                                                        <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
-                                                                            <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
-                                                                                <path d="m19.5 12 5 5-5 5"/>
-                                                                                <path d="m24.5 17h-15"/>
-                                                                            </g>
-                                                                        </svg>
-                                                                    </p>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                </div>
-                                                <div class="col right">
-                                                    <li class="menus-container">
-                                                        <div class="label">更多客户</div>
-
-                                                        <a href="/customers/sling/">
-                                                            <span>Sling TV</span>
-                                                            <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
-                                                                <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
-                                                                    <path d="m19.5 12 5 5-5 5"/>
-                                                                    <path d="m24.5 17h-15"/>
-                                                                </g>
-                                                            </svg>
-                                                        </a>
-                                                        <a href="/customers/eoc/">
-                                                            <span>EOC</span>
-                                                            <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
-                                                                <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
-                                                                    <path d="m19.5 12 5 5-5 5"/>
-                                                                    <path d="m24.5 17h-15"/>
-                                                                </g>
-                                                            </svg>
-                                                        </a>
-                                                        <a href="/customers/deutsche-bahn/">
-                                                            <span>Deutsche Bahn</span>
-                                                            <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
-                                                                <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
-                                                                    <path d="m19.5 12 5 5-5 5"/>
-                                                                    <path d="m24.5 17h-15"/>
-                                                                </g>
-                                                            </svg>
-                                                        </a>
-                                                        <a class="box" href="/customers/">
-                                                            <span>查看所有客户故事</span>
-                                                        </a>
-                                                    </li>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </ul>
-                                </li>
-                                <li class='primary-menu-item menu-community {{ if eq .Params.section "resources" }}active{{ end }}'>
-                                    <a class="primary-menu" href="/resources/">资源</a>
-
-                                    <ul class="primary-menus-sub">
-                                        <div class="grid-container">
-                                            <div class="primary-menu-blocks">
-                                                <div class="menu-sub-block">
-                                                    <ul>
-                                                        <li class="articles-container">
-                                                            <div class="label">社区及活动</div>
-                                                            <a href="/community" class="menu-sub-block-item">社区概述</a>
-                                                            <a href="/online-meetups" class="menu-sub-block-item">企业级认证培训</a>
-                                                            <a href="/online-meetups" class="menu-sub-block-item">企业级认证证书查询</a>                                                            
-                                                            <a href="/online-meetups" class="menu-sub-block-item">开源社区在线培训</a>
-                                                            <a href="/events" class="menu-sub-block-item">线下活动</a>
-                                                            <a href="/rodeos" class="menu-sub-block-item">论坛</a>
-                                                            <a href="/rodeos" class="menu-sub-block-item">中国社区MVP</a>
-                                                            
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="menu-sub-block">
-                                                    <ul>
-                                                        <li class="articles-container">
-                                                            <div class="label">生态合作</div>
-                                                            <a href="" class="menu-sub-block-item">生态合作伙伴</a>
-                                                            <a href="/partners/" class="menu-sub-block-item">合作伙伴</a>
-                                                            <a href="/resources/#analyst-reports" class="menu-sub-block-item">分析师报告</a>
-                              
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="menu-sub-block">
-                                                    <ul>
-                                                        <li class="articles-container">
-                                                            <div class="label">技术资料</div>
-                                                            <a href="/blog" class="menu-sub-block-item">博客</a>
-                                                            <a href="/quick-start/" class="menu-sub-block-item">入门指南</a>
-                                                            <a href="/training/" class="menu-sub-block-item">入门培训</a>
-                                                               
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                
-                                                
-                                            </div>
-                                            <div class="primary-menu-blocks primary-menu-blocks-join">
-                                                <div class="menu-sub-block">
-                                                    <div style="text-align:center;"   class="articles-container">加入社区</div>
-                                                    <div style="text-align:center;" >
-                                                        <img style="height:150px;" src="/img/ewm.jpg" alt="二维码" />
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </ul>
-                                </li>
-                                <li class='primary-menu-item menu-company {{ if eq .Params.section "company" }}active{{ end }}'>
-                                    <a class="primary-menu" href="/about/">公司介绍</a>
+                                        </ul>
+                                    </li>
+                                    <li
+                                        class='primary-menu-item menu-products {{ if eq .Params.section "products" }}active{{ end }}'>
+                                        <a class="primary-menu" href="/products">产品</a>
+                                        <ul class="primary-menus-sub">
+                                            <div class="grid-container">
+                                                <div class="row">
+                                                    <div class="col-12 right">
 
-                                    <ul class="primary-menus-sub">
-                                        <div class="grid-container">
-                                            <div class="row">
-                                                <div class="col">
-                                                    <li class="menus-container">
-                                                        <a href="/about/">
-                                                            <span>公司故事</span>
+                                                        <ul>
+                                                            <li class="menus-container">
+                                                                <a href="/products">
+                                                                    <span>产品概览</span>
+                                                                    <svg class="icon right"
+                                                                        enable-background="new 0 0 34 34"
+                                                                        viewBox="0 0 34 34"
+                                                                        xmlns="http://www.w3.org/2000/svg">
+                                                                        <g class="svg-linear" stroke-linecap="round"
+                                                                            stroke-linejoin="round"
+                                                                            stroke-miterlimit="10">
+                                                                            <path d="m19.5 12 5 5-5 5"></path>
+                                                                            <path d="m24.5 17h-15"></path>
+                                                                        </g>
+                                                                        
+                                                                    </svg>
+                                                                    
+                                                                </a>
+                                                                <a href="/products/rancher" class="menu-sub-block-item">
+                                                                    <span>Rancher</span>
+                                                                    <svg class="icon right"
+                                                                        enable-background="new 0 0 34 34"
+                                                                        viewBox="0 0 34 34"
+                                                                        xmlns="http://www.w3.org/2000/svg">
+                                                                        <g class="svg-linear" stroke-linecap="round"
+                                                                            stroke-linejoin="round"
+                                                                            stroke-miterlimit="10">
+                                                                            <path d="m19.5 12 5 5-5 5"></path>
+                                                                            <path d="m24.5 17h-15"></path>
+                                                                        </g>
+                                                                    </svg>
+                                                                    <br>企业级Kubernetes管理平台
+                                                                </a>
+                                                                <!--                                                             <a href="/rancher-os" class="menu-sub-block-item">
+                                                                <span>RancherOS</span>
+
                                                             <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
                                                                 <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
-                                                                    <path d="m19.5 12 5 5-5 5"/>
-                                                                    <path d="m24.5 17h-15"/>
+                                                                    <path d="m19.5 12 5 5-5 5"></path>
+                                                                    <path d="m24.5 17h-15"></path>
                                                                 </g>
                                                             </svg>
-                                                        </a>
-                                                        <a href="/rodeos">
-                                                            <span>荣誉资质</span>
-                                                            <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
-                                                                <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
-                                                                    <path d="m19.5 12 5 5-5 5"/>
-                                                                    <path d="m24.5 17h-15"/>
-                                                                </g>
-                                                            </svg>
-                                                        </a>
-                                                        <a href="/press/">
-                                                            <span>新闻报道</span>
-                                                            <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
-                                                                <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
-                                                                    <path d="m19.5 12 5 5-5 5"/>
-                                                                    <path d="m24.5 17h-15"/>
-                                                                </g>
-                                                            </svg>
-                                                        </a>
-                                                        
-                                                        <a href="/careers/">
-                                                            <span>加入我们</span>
-                                                            <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
-                                                                <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
-                                                                    <path d="m19.5 12 5 5-5 5"/>
-                                                                    <path d="m24.5 17h-15"/>
-                                                                </g>
-                                                            </svg>
-                                                        </a>
-                                                        <a href="/contact/">
-                                                            <span>联系我们</span>
-                                                            <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
-                                                                <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
-                                                                    <path d="m19.5 12 5 5-5 5" />
-                                                                    <path d="m24.5 17h-15" />
-                                                                </g>
-                                                            </svg>
-                                                        </a>
-                                                        
-                                                    </li>
+                                                            </a> -->
+                                                                <a href="/docs/rke/latest/en/"
+                                                                    class="menu-sub-block-item">
+                                                                    <span>RKE</span>
+
+                                                                    <svg class="icon right"
+                                                                        enable-background="new 0 0 34 34"
+                                                                        viewBox="0 0 34 34"
+                                                                        xmlns="http://www.w3.org/2000/svg">
+                                                                        <g class="svg-linear" stroke-linecap="round"
+                                                                            stroke-linejoin="round"
+                                                                            stroke-miterlimit="10">
+                                                                            <path d="m19.5 12 5 5-5 5"></path>
+                                                                            <path d="m24.5 17h-15"></path>
+                                                                        </g>
+                                                                    </svg>
+                                                                </a>
+
+                                                                <a href="/k3s" class="menu-sub-block-item"
+                                                                    target="_blank">
+                                                                    <span>K3s</span>
+
+                                                                    <svg class="icon right"
+                                                                        enable-background="new 0 0 34 34"
+                                                                        viewBox="0 0 34 34"
+                                                                        xmlns="http://www.w3.org/2000/svg">
+                                                                        <g class="svg-linear" stroke-linecap="round"
+                                                                            stroke-linejoin="round"
+                                                                            stroke-miterlimit="10">
+                                                                            <path d="m19.5 12 5 5-5 5"></path>
+                                                                            <path d="m24.5 17h-15"></path>
+                                                                        </g>
+                                                                    </svg>
+                                                                    <br>最轻量Kubernetes发行版
+                                                                </a>
+                                                                <a href="/rio" class="menu-sub-block-item"
+                                                                    target="_blank">
+                                                                    <span>Rio</span>
+
+                                                                    <svg class="icon right"
+                                                                        enable-background="new 0 0 34 34"
+                                                                        viewBox="0 0 34 34"
+                                                                        xmlns="http://www.w3.org/2000/svg">
+                                                                        <g class="svg-linear" stroke-linecap="round"
+                                                                            stroke-linejoin="round"
+                                                                            stroke-miterlimit="10">
+                                                                            <path d="m19.5 12 5 5-5 5"></path>
+                                                                            <path d="m24.5 17h-15"></path>
+                                                                        </g>
+                                                                    </svg>
+                                                                    <br>极简MicroPaaS平台</a>
+                                                                </a>
+
+                                                            </li>
+
+                                                        </ul>
+
+                                                        <div class="primary-menu-blocks primary-menu-blocks-join">
+                                                            <div class="menus-container menu-container-button">
+                                                                <a class="box" href="/request-a-demo/">
+                                                                    <span>申请演示</span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                        </ul>
+                                    </li>
+                                    <li
+                                        class='primary-menu-item menu-customers {{ if eq .Params.section "customers" }}active{{ end }}'>
+                                        <a class="primary-menu" href="/customers">客户案例</a>
+
+                                        <ul class="primary-menus-sub">
+                                            <div class="grid-container">
+                                                <div class="row">
+                                                    <div class="col left">
+                                                        <li class="feature-container single split-half">
+                                                            <div class="label">特色</div>
+
+                                                            <div class="article-item">
+                                                                <div class="article-thumbmail">
+                                                                    <img class="image"
+                                                                        src="/img/header-customers-featured-thumbnail.png"
+                                                                        alt="A Male Scientist in a White Lab Coat Looking Into a Microscope">
+                                                                </div>
+
+                                                                <div class="article-texts">
+                                                                    <a href="/customers/illumina/">
+                                                                        <h2 class="title-label">Illumina</h2>
+                                                                        <p class="description-label">
+                                                                            Illumina Innovates with Rancher and
+                                                                            Kubernetes
+
+                                                                            <svg class="icon right"
+                                                                                enable-background="new 0 0 34 34"
+                                                                                viewBox="0 0 34 34"
+                                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                                <g class="svg-linear"
+                                                                                    stroke-linecap="round"
+                                                                                    stroke-linejoin="round"
+                                                                                    stroke-miterlimit="10">
+                                                                                    <path d="m19.5 12 5 5-5 5" />
+                                                                                    <path d="m24.5 17h-15" />
+                                                                                </g>
+                                                                            </svg>
+                                                                        </p>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </div>
+                                                    <div class="col right">
+                                                        <li class="menus-container">
+                                                            <div class="label">更多客户</div>
+
+                                                            <a href="/customers/sling/">
+                                                                <span>Sling TV</span>
+                                                                <svg class="icon right"
+                                                                    enable-background="new 0 0 34 34"
+                                                                    viewBox="0 0 34 34"
+                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                    <g class="svg-linear" stroke-linecap="round"
+                                                                        stroke-linejoin="round" stroke-miterlimit="10">
+                                                                        <path d="m19.5 12 5 5-5 5" />
+                                                                        <path d="m24.5 17h-15" />
+                                                                    </g>
+                                                                </svg>
+                                                            </a>
+                                                            <a href="/customers/eoc/">
+                                                                <span>EOC</span>
+                                                                <svg class="icon right"
+                                                                    enable-background="new 0 0 34 34"
+                                                                    viewBox="0 0 34 34"
+                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                    <g class="svg-linear" stroke-linecap="round"
+                                                                        stroke-linejoin="round" stroke-miterlimit="10">
+                                                                        <path d="m19.5 12 5 5-5 5" />
+                                                                        <path d="m24.5 17h-15" />
+                                                                    </g>
+                                                                </svg>
+                                                            </a>
+                                                            <a href="/customers/deutsche-bahn/">
+                                                                <span>Deutsche Bahn</span>
+                                                                <svg class="icon right"
+                                                                    enable-background="new 0 0 34 34"
+                                                                    viewBox="0 0 34 34"
+                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                    <g class="svg-linear" stroke-linecap="round"
+                                                                        stroke-linejoin="round" stroke-miterlimit="10">
+                                                                        <path d="m19.5 12 5 5-5 5" />
+                                                                        <path d="m24.5 17h-15" />
+                                                                    </g>
+                                                                </svg>
+                                                            </a>
+                                                            <a class="box" href="/customers/">
+                                                                <span>查看所有客户故事</span>
+                                                            </a>
+                                                        </li>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </ul>
-                                </li>
-                                <li class="primary-menu-item menu-get_started get-started">
-                                    <a href="/quick-start/">开始使用</a>
-                                </li>
-                            </ul>
+                                        </ul>
+                                    </li>
+                                    <li
+                                        class='primary-menu-item menu-community {{ if eq .Params.section "resources" }}active{{ end }}'>
+                                        <a class="primary-menu" href="/resources/">资源</a>
+
+                                        <ul class="primary-menus-sub">
+                                            <div class="grid-container">
+                                                <div class="primary-menu-blocks">
+                                                    <div class="menu-sub-block">
+                                                        <ul>
+                                                            <li class="articles-container">
+                                                                <div class="label">社区及活动</div>
+                                                                <a href="/community"
+                                                                    class="menu-sub-block-item">社区概述</a>
+                                                                <a href="/online-meetups"
+                                                                    class="menu-sub-block-item">企业级认证培训</a>
+                                                                <a href="/online-meetups"
+                                                                    class="menu-sub-block-item">企业级认证证书查询</a>
+                                                                <a href="/online-meetups"
+                                                                    class="menu-sub-block-item">开源社区在线培训</a>
+                                                                <a href="/events" class="menu-sub-block-item">线下活动</a>
+                                                                <a href="/rodeos" class="menu-sub-block-item">论坛</a>
+                                                                <a href="/rodeos"
+                                                                    class="menu-sub-block-item">中国社区MVP</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="menu-sub-block">
+                                                        <ul>
+                                                            <li class="articles-container">
+                                                                <div class="label">生态合作</div>
+                                                                <a href="" class="menu-sub-block-item">生态合作伙伴</a>
+                                                                <a href="/partners/"
+                                                                    class="menu-sub-block-item">合作伙伴</a>
+                                                                <a href="/resources/#analyst-reports"
+                                                                    class="menu-sub-block-item">分析师报告</a>
+
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="menu-sub-block">
+                                                        <ul>
+                                                            <li class="articles-container">
+                                                                <div class="label">技术资料</div>
+                                                                <a href="/blog" class="menu-sub-block-item">博客</a>
+                                                                <a href="/quick-start/"
+                                                                    class="menu-sub-block-item">入门指南</a>
+                                                                <a href="/training/"
+                                                                    class="menu-sub-block-item">入门培训</a>
+
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="primary-menu-blocks primary-menu-blocks-join">
+                                                    <div class="menu-sub-block">
+                                                        <div style="text-align:center;" class="articles-container">加入社区
+                                                        </div>
+                                                        <div style="text-align:center;">
+                                                            <img style="height:150px;" src="/img/ewm.jpg" alt="二维码" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </ul>
+                                    </li>
+                                    <li
+                                        class='primary-menu-item menu-company {{ if eq .Params.section "company" }}active{{ end }}'>
+                                        <a class="primary-menu" href="/about/">公司介绍</a>
+
+                                        <ul class="primary-menus-sub">
+                                            <div class="grid-container">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <li class="menus-container">
+                                                            <a href="/about/">
+                                                                <span>公司故事</span>
+                                                                <svg class="icon right"
+                                                                    enable-background="new 0 0 34 34"
+                                                                    viewBox="0 0 34 34"
+                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                    <g class="svg-linear" stroke-linecap="round"
+                                                                        stroke-linejoin="round" stroke-miterlimit="10">
+                                                                        <path d="m19.5 12 5 5-5 5" />
+                                                                        <path d="m24.5 17h-15" />
+                                                                    </g>
+                                                                </svg>
+                                                            </a>
+                                                            <a href="/rodeos">
+                                                                <span>荣誉资质</span>
+                                                                <svg class="icon right"
+                                                                    enable-background="new 0 0 34 34"
+                                                                    viewBox="0 0 34 34"
+                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                    <g class="svg-linear" stroke-linecap="round"
+                                                                        stroke-linejoin="round" stroke-miterlimit="10">
+                                                                        <path d="m19.5 12 5 5-5 5" />
+                                                                        <path d="m24.5 17h-15" />
+                                                                    </g>
+                                                                </svg>
+                                                            </a>
+                                                            <a href="/press/">
+                                                                <span>新闻报道</span>
+                                                                <svg class="icon right"
+                                                                    enable-background="new 0 0 34 34"
+                                                                    viewBox="0 0 34 34"
+                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                    <g class="svg-linear" stroke-linecap="round"
+                                                                        stroke-linejoin="round" stroke-miterlimit="10">
+                                                                        <path d="m19.5 12 5 5-5 5" />
+                                                                        <path d="m24.5 17h-15" />
+                                                                    </g>
+                                                                </svg>
+                                                            </a>
+
+                                                            <a href="/careers/">
+                                                                <span>加入我们</span>
+                                                                <svg class="icon right"
+                                                                    enable-background="new 0 0 34 34"
+                                                                    viewBox="0 0 34 34"
+                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                    <g class="svg-linear" stroke-linecap="round"
+                                                                        stroke-linejoin="round" stroke-miterlimit="10">
+                                                                        <path d="m19.5 12 5 5-5 5" />
+                                                                        <path d="m24.5 17h-15" />
+                                                                    </g>
+                                                                </svg>
+                                                            </a>
+                                                            <a href="/contact/">
+                                                                <span>联系我们</span>
+                                                                <svg class="icon right"
+                                                                    enable-background="new 0 0 34 34"
+                                                                    viewBox="0 0 34 34"
+                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                    <g class="svg-linear" stroke-linecap="round"
+                                                                        stroke-linejoin="round" stroke-miterlimit="10">
+                                                                        <path d="m19.5 12 5 5-5 5" />
+                                                                        <path d="m24.5 17h-15" />
+                                                                    </g>
+                                                                </svg>
+                                                            </a>
+
+                                                        </li>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </ul>
+                                    </li>
+                                    <li class="primary-menu-item menu-get_started get-started">
+                                        <a href="/quick-start/">开始使用</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </nav>
+        </header>
+
+
+
+        <div class="modal-content" id="open-search">
+            <div class="content search-modal">
+                <!--search input-->
+                <div class="container-search">
+                    <form id="searchForm"><input type="search" id="search-box" autocomplete="off"></input></form>
+                </div>
+
+                <!--search results-->
+                <div class="overlay-search">
+                    <div class="search-results" id="hits"></div>
+                </div>
             </div>
-        </nav>
-    </header>
-
-
-
-<div class="modal-content" id="open-search">
-  <div class="content search-modal">
-    <!--search input-->
-    <div class="container-search">
-      <form id="searchForm"><input type="search" id="search-box" autocomplete="off"></input></form>
-    </div>
-
-    <!--search results-->
-    <div class="overlay-search">
-      <div class="search-results" id="hits"></div>
-    </div>
-  </div>
-</div>
+        </div>
